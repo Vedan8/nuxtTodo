@@ -13,7 +13,8 @@ export const useAuth = () => {
       },
     });
 
-    await getCurrentUser();
+    const data = await $fetch<User | null>("/api/auth/me");
+    user.value = data || null;
   };
 
   const register = async (

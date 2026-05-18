@@ -22,10 +22,16 @@ export const useTodo = () => {
       },
     );
 
-    await getTodos();
+    const data = await $fetch<Todo[]>("/api/todos");
+    todos.value = data || [];
   };
 
   const updateTodo = async (id: string, completed: boolean) => {
+    const todo = todos.value.find(t => t._id === id);
+    if (todo) {
+      todo.completed = completed;
+    }
+
     await $fetch(
       `/api/todos/${id}`,
 
@@ -37,8 +43,6 @@ export const useTodo = () => {
         },
       },
     );
-
-    await getTodos();
   };
 
   const deleteTodo = async (id: string) => {

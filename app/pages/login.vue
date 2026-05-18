@@ -86,7 +86,7 @@ const handleLogin = async () => {
   try {
     await login(email.value, password.value);
 
-    navigateTo("/dashboard");
+    await navigateTo("/dashboard");
   } catch (error: any) {
     errorMessage.value =
       error.data?.statusMessage || error.data?.message || "An error occurred";
