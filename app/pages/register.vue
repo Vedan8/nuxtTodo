@@ -69,10 +69,16 @@
 
 .auth-link a {
   font-weight: 500;
+  color: var(--text);
+  text-decoration: underline;
 }
 </style>
 
 <script setup lang="ts">
+useHead({
+  title: 'Register - Todo App'
+});
+
 definePageMeta({
   middleware: ["guest"],
 });

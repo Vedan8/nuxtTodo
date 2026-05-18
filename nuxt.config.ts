@@ -6,6 +6,14 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en'
+      }
+    }
+  },
+
   css: [
     "./app/assets/css/variables.css",
     "./app/assets/css/forms.css",

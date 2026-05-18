@@ -65,6 +65,10 @@
 </style>
 
 <script setup lang="ts">
+useHead({
+  title: 'Dashboard - Todo App'
+});
+
 definePageMeta({
   middleware: ["auth"],
 });

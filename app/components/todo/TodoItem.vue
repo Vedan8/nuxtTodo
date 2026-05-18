@@ -1,12 +1,13 @@
 <template>
   <li class="todo-item" :class="{ completed: todo.completed }">
     <label class="checkbox-container">
+      <span class="visually-hidden">{{ todo.completed ? 'Unmark' : 'Mark' }} {{ todo.title }}</span>
       <input
         type="checkbox"
         class="visually-hidden"
         :checked="todo.completed"
         @change="toggle"
-        :aria-label="`Mark ${todo.title}`"
+        :aria-label="todo.completed ? `Unmark ${todo.title}` : `Mark ${todo.title}`"
       />
       <div class="custom-checkbox">
       </div>
