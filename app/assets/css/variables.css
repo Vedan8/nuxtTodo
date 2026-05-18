@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --primary: #bae6fd;
+  --primary-hover: #7dd3fc;
+  --primary-active: #38bdf8;
+  --background: #fdfbf7;
+  --card: #ffffff;
+  --card-border: #111111;
+  --text: #111111;
+  --text-muted: #52525b;
+  --danger: #fca5a5;
+  --danger-hover: #f87171;
+  --success: #86efac;
+  
+  /* Layout & Styling */
+  --border-main: 2px solid var(--card-border);
+  --radius: 4px;
+  --radius-sm: 4px;
+  --shadow: 4px 4px 0px 0px #111111;
+  --shadow-sm: 2px 2px 0px 0px #111111;
+  --font-sans: 'Inter', sans-serif;
+}
