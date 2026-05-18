@@ -16,6 +16,14 @@ export default defineNuxtConfig({
     strict: true,
   },
 
+  modules: ["@nuxt/fonts"],
+
+  routeRules: {
+    "/login": { prerender: true },
+    "/register": { prerender: true },
+    "/dashboard": { ssr: false },
+  },
+
   runtimeConfig: {
     jwtSecret: process.env.JWT_SECRET,
     mongodbUri: process.env.MONGODB_URI,
