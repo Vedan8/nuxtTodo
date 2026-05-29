@@ -24,7 +24,7 @@ export default defineNuxtConfig({
     strict: true,
   },
 
-  modules: ["@nuxt/fonts"],
+  modules: ["@nuxt/fonts", "@sentry/nuxt/module"],
 
   routeRules: {
     "/login": { prerender: true },
@@ -36,5 +36,15 @@ export default defineNuxtConfig({
     jwtSecret: process.env.JWT_SECRET,
     mongodbUri: process.env.MONGODB_URI,
     public: {},
+  },
+
+  sentry: {
+    org: "symb",
+    project: "javascript-nuxt",
+    autoInjectServerSentry: "top-level-import",
+  },
+
+  sourcemap: {
+    client: "hidden",
   },
 });
